@@ -1,0 +1,6 @@
+.title {
+  display: flex;
+  justify-content: center;
+  color: #0A83B9;
+  font-size: 5em;
+}

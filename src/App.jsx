@@ -32,9 +32,9 @@ class App extends React.Component {
 render() {
   return (
       <Container>
-        <Row>
-      <Col >
-      <img class="d-block m-auto" src="https://chuck3774bucket.s3.us-east-2.amazonaws.com/2.png"/>
+        <Row className="justify-content-md-center">
+      <Col md={6}>
+      <div className="title">Time2Fly</div>
        </Col>
         </Row>
 
@@ -43,29 +43,23 @@ render() {
 
         <Nav
         style={{
-          backgroundColor: '#E9A637',
-          borderRadius: '5px',
-          borderColor: '#A11100',
+          backgroundColor: '#F4EF7D',
+          borderRadius: '5px'
         }}
         className="justify-content-center">
   <Nav.Link
      style={{
-       color: '#A11100'
+       color: '#0A83B9'
       }}
       name="feed"
       onClick={(e) => this.changeView(e)}>Feed</Nav.Link>
     <Nav.Link
     style={{
-      color: '#A11100'
+      color: '#0A83B9'
     }}
-    name="friends"
-    onClick={(e) => this.changeView(e)}>Friends</Nav.Link>
-    <Nav.Link
-    style={{
-      color: '#A11100'
-    }}
-    name="notifications"
-    onClick={(e) => this.changeView(e)}>Notifications</Nav.Link>
+    name="stats"
+    onClick={(e) => this.changeView(e)}>Stats</Nav.Link>
+
      </Nav>
 
           </Col>
