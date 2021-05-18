@@ -4,3 +4,15 @@
   color: #0A83B9;
   font-size: 5em;
 }
+
+.secondaryTitle {
+  text-decoration: underline;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  color: #0A83B9;
+}
+
+.feed {
+  margin: auto;
+}

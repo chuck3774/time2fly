@@ -9,10 +9,20 @@ import axios from 'axios';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {view: 'feed'};
+    this.state = {view: 'feed', runs: []};
   }
 
+  componentDidMount() {
+    axios.get('localhost:3001/runs')
+    .then((data) => {
+      this.setState({runs: data})
+    })
+  }
 
+  changeView(e) {
+    const newView = e.target.name;
+    this.setState({view: newView})
+  }
 
   renderView() {
     const {view} = this.state;
@@ -52,7 +62,7 @@ render() {
        color: '#0A83B9'
       }}
       name="feed"
-      onClick={(e) => this.changeView(e)}>Feed</Nav.Link>
+      onClick={(e) => this.changeView(e)}>Runs</Nav.Link>
     <Nav.Link
     style={{
       color: '#0A83B9'

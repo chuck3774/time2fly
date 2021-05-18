@@ -2,7 +2,7 @@ const compression = require('compression');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-// const db = require('./database.js');
+const db = require('./database.js');
 
 const app = express();
 app.use(express.json());
@@ -11,8 +11,14 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, '.', 'public')));
 
-app.get('/info', (req, res) => {
- res.status(200).json('you did it');
+app.get('/runs', (req, res) => {
+ db.Run.find({})
+ .then((data) => {
+   res.status(200).json(data);
+ })
+ .catch((error) => {
+   res.status(404).json(error);
+ })
 })
 
 

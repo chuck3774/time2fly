@@ -5,9 +5,19 @@ import axios from 'axios';
 const Feed = (props) => {
 
         return (
-        <div>The Feed</div>
+          <div className="feed">
+
+<Button
+ style={{
+   marginTop: '10px',
+  backgroundColor: '#0A83B9',
+  borderRadius: '5px',
 
 
+}}
+>Add Run</Button>
+
+          </div>
 
 )
 }
